@@ -13,6 +13,7 @@ inputs:
   p3:
     description: p3
     required: true
+    default: {p1":"foo1234"}
 runs:
   using: composite
   steps:
