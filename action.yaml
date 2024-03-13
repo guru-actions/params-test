@@ -28,3 +28,16 @@ runs:
         echo ${{ inputs.p2 }}
         echo ${{ inputs.p3 }}
         jq --version
+        PARAMETERS=${{ inputs.p3 }}
+        BUILD_REQUEST=$(cat <<EOF
+        {
+          "buildType": {
+            "id": "$BUILD_CONFIG_ID"
+          },
+          "branchName": "foobranch",
+          "properties": {
+            "property": $(echo "$PARAMETERS" | jq -r 'to_entries | map({name: .key, value: .value})')
+          }
+        }
+        EOF
+        )
