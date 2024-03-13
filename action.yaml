@@ -20,5 +20,5 @@ runs:
       shell: sh
       run: |
         printf "running tests\n"
-        echo=${{ inputs.p1 }}
-        echo=${{ inputs.p2 }}
+        echo ${{ inputs.p1 }}
+        echo ${{ inputs.p2 }}
