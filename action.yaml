@@ -19,7 +19,7 @@ runs:
   steps:
     - id: process
       name: process the inputs
-      uses: docker://golang:1.20.3-alpine3.17
+      uses: docker://gururepservice/curljq:latest
       shell: sh
       run: |
         printf "running tests\n"
