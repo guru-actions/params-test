@@ -19,5 +19,6 @@ runs:
       uses: docker://golang:1.20.3-alpine3.17
       shell: sh
       run: |
+        printf "running tests\n"
         echo=${{ inputs.p1 }}
         echo=${{ inputs.p2 }}
