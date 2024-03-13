@@ -10,7 +10,9 @@ inputs:
   p2:
     description: p2
     required: true
-
+  p3:
+    description: p3
+    required: true
 runs:
   using: composite
   steps:
@@ -22,3 +24,4 @@ runs:
         printf "running tests\n"
         echo ${{ inputs.p1 }}
         echo ${{ inputs.p2 }}
+        echo ${{ inputs.p3 }}
