@@ -1,0 +1,23 @@
+
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: action
+name: param-examples
+description: toubleshoot params
+inputs:
+  p1:
+    description: p1
+    required: true
+  p2:
+    description: p2
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - id: process
+      name: process the inputs
+      uses: docker://golang:1.20.3-alpine3.17
+      shell: sh
+      run: |
+        echo=${{ inputs.p1 }}
+        echo=${{ inputs.p2 }}
