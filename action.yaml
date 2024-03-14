@@ -24,7 +24,7 @@ runs:
       run: |
         #!/usr/bin/env bash
         printf "running tests\n"
-        echo ${{ inputs.p1 }}
+        echo "${{ inputs.p1 }}"
         echo ${{ inputs.p2 }}
         echo ${{ inputs.p3 }}
         jq --version
