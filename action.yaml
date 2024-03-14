@@ -25,6 +25,10 @@ runs:
         #!/usr/bin/env bash
         printf "running tests\n"
         echo "${{ inputs.p1 }}"
+        echo "end of echh"
+        echo "${{ inputs.p1 }}" > tmp123
+        cat tmp123
+        echo "endd"
         echo ${{ inputs.p2 }}
         echo ${{ inputs.p3 }}
         jq --version
